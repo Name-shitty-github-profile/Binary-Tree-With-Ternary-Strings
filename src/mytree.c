@@ -114,7 +114,6 @@ int BinTree_addNodeAt(BinTree* self, const char* path, int _data)
 	char current = '\0'; //current path char, which represents a node directive
 	TreeNode* temp = self->root; //current ptr to node
 
-	puts("Adding data...");
 	while(path_idx < path_depth - 1)
 	{
 		current = path[path_idx];
@@ -144,7 +143,11 @@ int BinTree_addNodeAt(BinTree* self, const char* path, int _data)
 		
 		path_idx++;
 	}
-	
+
+	//do not add within a non-leaf node!
+	if(temp->left != NULL || temp->right != NULL)
+		return BT_FAIL;
+
 	//use path's last directive char, and determine whether to add left or right
 	current = path[path_idx];
 
