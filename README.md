@@ -28,3 +28,6 @@ _Main Functions:_
  5. `BinTree_addNodeAt(BinTree* self, const char* path, int _data)`: Attempts to add a node to the tree at the ending location of the path string. It fails when the path is inside the tree. Neither will it add a node outside the tree by >= 2 levels. A single level past some edge of the tree is okay for adding.  
  6. `BinTree_setDataAt(BinTree* self, const char* path, int _data)`: Attempts to set data at the end location of the given path. It fails when the path is empty or out of bounds.  
  7. `BinTree_getDataAt(BinTree* self, const char* path)`: Attempts to retrieve an integer stored in the path's ending location within the tree. It fails when the path is empty or out of bounds.  
+
+_Other Notes:_  
+I forgot to put more extensive tests for the node addition and getting functions. I'll do that later.
