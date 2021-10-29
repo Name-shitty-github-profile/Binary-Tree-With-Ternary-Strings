@@ -31,3 +31,4 @@ _Main Functions:_
 
 _Other Notes:_  
 I forgot to put more extensive tests for the node addition and getting functions. I'll do that later.
+Also, this is meant to compile on Linux-based systems, and I am unsure of how it would work for Windows...
